@@ -1,0 +1,54 @@
+# .gitignore
+
+# Python/Django
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+*.bak
+# If using sqlite3
+*.sqlite3
+# If using pipenv
+Pipfile.lock
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+media
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# IDEs / editors
+.idea/
+*.swp
+*.swo
+*.swn
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node / NPM
+node_modules/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+../env/
