@@ -37,3 +37,13 @@ def monthly_challenge(request, month):
         return HttpResponse(response_data)
     except:
         return HttpResponseNotFound("<h1>This month is not supported!</h1>")
+
+
+def index(request):
+    list_items = ""
+    months = list(monthly_challenges.keys())
+    for month in months:
+        month_path = reverse("month-challenge", args=[month])
+        list_items += f"<li><a href=\"{month_path}\">{month.capitalize()}</a></li>"
+    
+    return HttpResponse(f"<ul>{list_items}</ul>")
